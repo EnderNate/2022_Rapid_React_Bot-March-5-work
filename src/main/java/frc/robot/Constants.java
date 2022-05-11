@@ -1,0 +1,113 @@
+// Copyright (c) FIRST and other WPILib contributors.
+// Open Source Software; you can modify and/or share it under the terms of
+// the WPILib BSD license file in the root directory of this project.
+
+package frc.robot;
+
+import edu.wpi.first.wpilibj.PneumaticsModuleType;
+
+/**
+ * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
+ * constants. This class should not be used for any other purpose. All constants should be declared
+ * globally (i.e. public static). Do not put anything functional in this class.
+ *
+ * <p>It is advised to statically import this class (or one of its inner classes) wherever the
+ * constants are needed, to reduce verbosity.
+ */
+public final class Constants {
+    //DriveTrain
+    // LEFT and RIGHT are robot's view/perspective
+    public static final int LEFT_FRONT_TALON = 4;
+    public static final int LEFT_BACK_TALON = 3;
+    public static final int RIGHT_FRONT_TALON = 2;
+    public static final int RIGHT_BACK_TALON = 1;
+    
+    //Shooter
+    public static final int SHOOTER_FALCON_TOP = 20;
+    public static final int LEFT_SHOOTER_FALCON = 21;
+    public static final int RIGHT_SHOOTER_FALCON = 22;    
+    public static final int KICKER_FALCON = 23;
+    
+    public static final int HOOD_TALON = 0; //fx // servo control?
+
+    //Indexer
+    public static final int INDEX_BELT_LEFT= 31; //figure out later  srx
+    public static final int INDEX_BELT_RIGHT= 32; //figure out later   srx
+    public static final int INDEX_KICK_TALON = 23;   //  srx
+    
+
+    //Speeds
+    public static final double DRIVETRAIN_SPEED = 1.0;//set to low for demo with kids
+    public static final double SHOOTER_SPEED = 0.4;
+    public static final double SHOOTER_SPEED_TOP = 1.0;
+    public static final double INDEXER_SPEED = 0.9;
+    public static final double INTAKE_SPEED = 0.1; //from 0.65
+    public static final double CLIMB_SPEED = 0;
+    public static final double KICK_SPEED = 0.4;
+    public static final double AUTO_SPEED = -0.5;
+
+    //Servo settings
+    public static final int SERVO_SPEED = 16;
+    public static final int SERVO_LENGTH = 140;
+    public static final int LEFT_SERVO_CHANNEL = 0;
+    public static final int RIGHT_SERVO_CHANNEL = 9;
+
+    public static final double SERVO_FAR_SHOT_LENGTH = 100;  //this is the length of the servo in mm
+    public static final double SERVO_FENDER_SHOT_LENGTH = 45;  //this is half of the length in mm
+    public static final double SERVO_REJECT_SHOT_LENGTH = 0;  // this is the number 0, it's even, and round
+
+    //Controller Inputs
+    public static final int DRIVER_CONTROLLER = 0;
+    public static final int SHOOTER_CONTROLLER = 1;
+    public static final int RIGHT_TRIGGER = 3;
+    public static final int LEFT_TRIGGER = 2;
+    public static final int XBOX_LEFT_X_AXIS = 0;
+    
+    //Intake
+    public static final int INTAKE_TALON = 40;
+    //public static final int INTAKE_RIGHT_TALON = 12;
+    public static final int INTAKE_CHANNEL = 0;
+   
+    //Sonar
+    public static final int SONAR_CHANNEL = 0;
+
+    //Solenoid Channels
+    public static final int SHIFTER_CHANNEL = 1;
+
+    public static final int CLIMB_PORT = 2;
+    
+    public static final int HOOK_FORWARD = 2;
+    public static final int HOOK_REVERSE = 3;
+
+    public static final int ENABLE_FORWARD = 4;
+    public static final int ENABLE_REVERSE = 5;
+
+    public static final int ACTUATION_FORWARD = 6;
+    public static final int ACTUATION_REVERSE = 7;
+
+    //Climb Motors
+    public static final int CLIMB_FALCON = 0;
+	public static final int CLIMB_FALCON_INVERTED = 0;
+    
+    public static final int kTimeoutMs = 30;
+    public static final int kPIDLoopIdx = 0;
+
+    //kP kI kD kF Iz PeakOut -- FOR PID LOOP
+    public final static Gains kGains_Velocit_shooterWheel = new Gains(0.1,  0.001,  2,  767.25/17207,  300,  1.00);
+    public final static Gains kGains_Velocit_topWheel = new Gains(0.1,  0.001,  2,  767.25/17207,  300,  1.00); // needs to be tuned unless it's the same lol
+    public final static Gains kGains_Posit_climb = new Gains(0.15,  0.0,  1,  0.0,  0,  1.00); //needs to be tuned
+
+    //Digital Inputs
+    public static final int BB_1_CHANNEL = 9; //9?
+    public static final int BB_2_CHANNEL = 4;
+    //public static final int BB_3_CHANNEL = 4;
+    public static final int LIMIT_SWITCH_DI = 6;
+
+    //PWM
+    public static final int SERVO_1_CHANNEL = 0;
+    public static final int SERVO_2_CHANNEL = 9;
+    
+
+    
+}
+
